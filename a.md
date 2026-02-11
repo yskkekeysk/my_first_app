@@ -16,3 +16,5 @@
             打开欢迎界面
             选择 Get from Version Control
             粘贴 GitHub 仓库地址  
+
+        git@github.com:yskkekeysk/my_first_app.git
