@@ -9,7 +9,7 @@
         顶部菜单选择：
         VCS → Enable Version Control Integration...
         选择 Git → OK
-        112
+        112sadf asd das 
 
 
         或从现有仓库导入：
