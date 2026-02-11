@@ -209,3 +209,22 @@
         git credential-cache exit
         git pull
         然后按提示输入新 Token 即可。
+
+        #  快速解决方案
+                直接运行这两个命令：
+                powershell
+                # 1. 删除 Windows 保存的 GitHub 凭据
+                   cmdkey /delete:git:https://github.com
+                # 2. 强制 Git 操作
+                   git fetch --all
+                如果弹出窗口，说明清除成功，输入新 Token 即可。
+
+# 🔧 解决方案：强制触发认证
+
+        方法一：创建并推送一个测试提交（最有效）
+        # 1. 创建一个空提交（不会影响代码）
+        git commit --allow-empty -m "测试提交，用于触发认证"
+
+        # 2. 推送这个提交
+        git push origin main
+        现在肯定会弹出 认证窗口，要求输入用户名和 Token。
