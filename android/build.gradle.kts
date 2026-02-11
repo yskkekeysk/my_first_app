@@ -1,6 +1,27 @@
+buildscript {
+    repositories {
+        // 使用阿里云镜像
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { url = uri("https://maven.aliyun.com/repository/central") }
+        mavenCentral()
+    }
+
+    dependencies {
+        // 如果 Kotlin 1.8.0 有问题，尝试更新到更高版本
+        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+    }
+}
+
 allprojects {
     repositories {
-        google()
+        // 使用阿里云镜像
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/public") }
+        maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { url = uri("https://maven.aliyun.com/repository/central") }
         mavenCentral()
     }
 }
@@ -25,19 +46,10 @@ tasks.register<Delete>("clean") {
 
 
 
-
-
 //allprojects {
 //    repositories {
-//        // 使用阿里云镜像替换原来的 google() 和 mavenCentral()
-//        maven { url = uri("https://maven.aliyun.com/repository/google") }
-//        maven { url = uri("https://maven.aliyun.com/repository/public") }
-//        maven { url = uri("https://maven.aliyun.com/repository/gradle-plugin") }
-//
-//        // 如果需要，可以保留一些其他仓库
+//        google()
 //        mavenCentral()
-//        // 如果需要 JitPack
-//        maven { url = uri("https://jitpack.io") }
 //    }
 //}
 //
@@ -58,3 +70,7 @@ tasks.register<Delete>("clean") {
 //tasks.register<Delete>("clean") {
 //    delete(rootProject.layout.buildDirectory)
 //}
+
+
+
+
