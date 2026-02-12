@@ -10,7 +10,7 @@ buildscript {
 
     dependencies {
         // 如果 Kotlin 1.8.0 有问题，尝试更新到更高版本
-        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("com.android.tools.build:gradle:8.13.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
     }
 }
